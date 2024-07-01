@@ -32,7 +32,9 @@ const Home = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-center">
-        <h2 className="text-2xl font-bold mb-6">Welcome, {data?.username}!</h2>
+        <h2 className="text-2xl font-bold mb-6">
+          {!data ? "Loading..." : `Welcome, ${data?.username}! `}
+        </h2>
         <button
           onClick={onLogout}
           className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition duration-200"
